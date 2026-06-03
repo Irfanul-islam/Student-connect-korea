@@ -3,6 +3,7 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
+import { VitePWA } from "vite-plugin-pwa";
 
 const rawPort = process.env.PORT;
 
@@ -32,6 +33,51 @@ export default defineConfig({
     react(),
     tailwindcss(),
     runtimeErrorOverlay(),
+    VitePWA({
+      registerType: "autoUpdate",
+      devOptions: { enabled: false },
+      includeAssets: ["icon.svg", "favicon.svg"],
+      manifest: {
+        name: "Galib on the Go",
+        short_name: "Galib",
+        description: "Muslim-friendly guide to halal food, mosques, and life in South Korea — Ansan-si",
+        theme_color: "#2d5a3d",
+        background_color: "#faf8f5",
+        display: "standalone",
+        orientation: "any",
+        start_url: basePath,
+        scope: basePath,
+        icons: [
+          { src: "icon.svg", sizes: "any", type: "image/svg+xml", purpose: "any" },
+          { src: "icon.svg", sizes: "any", type: "image/svg+xml", purpose: "maskable" },
+        ],
+        categories: ["travel", "lifestyle"],
+        shortcuts: [
+          { name: "Qibla Finder", short_name: "Qibla", url: "#qibla", icons: [{ src: "icon.svg", sizes: "any" }] },
+          { name: "Prayer Times", short_name: "Prayers", url: "#prayer", icons: [{ src: "icon.svg", sizes: "any" }] },
+        ],
+      },
+      workbox: {
+        globPatterns: ["**/*.{js,css,html,ico,png,svg,woff,woff2}"],
+        runtimeCaching: [
+          {
+            urlPattern: /^https:\/\/api\.aladhan\.com\/.*/i,
+            handler: "NetworkFirst",
+            options: { cacheName: "prayer-times", expiration: { maxEntries: 10, maxAgeSeconds: 86400 } },
+          },
+          {
+            urlPattern: /^https:\/\/cdn\.jsdelivr\.net\/.*/i,
+            handler: "StaleWhileRevalidate",
+            options: { cacheName: "currency", expiration: { maxEntries: 5, maxAgeSeconds: 3600 } },
+          },
+          {
+            urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
+            handler: "CacheFirst",
+            options: { cacheName: "google-fonts", expiration: { maxEntries: 10, maxAgeSeconds: 31536000 } },
+          },
+        ],
+      },
+    }),
     ...(process.env.NODE_ENV !== "production" &&
     process.env.REPL_ID !== undefined
       ? [
@@ -49,7 +95,7 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "src"),
-      "@assets": path.resolve(import.meta.dirname, "..", "..", "attached_assets"),
+      "@assets": path.resolve(import.meta.dirname, "src", "assets"),
     },
     dedupe: ["react", "react-dom"],
   },
