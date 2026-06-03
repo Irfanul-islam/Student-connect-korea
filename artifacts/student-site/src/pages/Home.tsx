@@ -1,9 +1,10 @@
 import { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { Link } from "wouter";
 import {
   MapPin, ExternalLink, Clock, Star, BookOpen, Globe, Navigation,
   Utensils, ShoppingBag, Search, Compass, ChevronRight, Phone,
-  ArrowDownToLine,
+  ArrowDownToLine, ChefHat,
 } from "lucide-react";
 import QiblaFinder from "@/components/QiblaFinder";
 import PrayerTimes from "@/components/PrayerTimes";
@@ -199,6 +200,7 @@ const navLinks = [
   { href: "#tips", label: "Tips" },
 ];
 
+
 export default function Home() {
   const [activeTab, setActiveTab] = useState<Tab>("mosques");
   const [menuOpen, setMenuOpen] = useState(false);
@@ -233,6 +235,9 @@ export default function Home() {
                 {l.label}
               </a>
             ))}
+            <Link href="/recipes" className="flex items-center gap-1.5 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+              <ChefHat className="w-4 h-4" /> Recipes
+            </Link>
             <button
               data-testid="button-install-app"
               onClick={handleInstall}
@@ -253,6 +258,9 @@ export default function Home() {
             {navLinks.map((l) => (
               <a key={l.href} href={l.href} onClick={() => setMenuOpen(false)} className="text-sm font-medium text-muted-foreground hover:text-foreground">{l.label}</a>
             ))}
+            <Link href="/recipes" onClick={() => setMenuOpen(false)} className="text-sm font-medium text-muted-foreground hover:text-foreground flex items-center gap-1.5">
+              <ChefHat className="w-4 h-4" /> Recipes
+            </Link>
             <button onClick={handleInstall} className="text-sm text-primary font-medium text-left flex items-center gap-1.5">
               <ArrowDownToLine className="w-4 h-4" /> Install App
             </button>
@@ -300,6 +308,10 @@ export default function Home() {
                 {cat.label}
               </a>
             ))}
+            <Link href="/recipes" className="flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-white/10 hover:bg-white/20 transition text-sm text-primary-foreground/90">
+              <ChefHat className="w-3.5 h-3.5" />
+              Recipes
+            </Link>
           </motion.div>
           {/* Install hint */}
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.9 }} className="mt-8 text-xs text-primary-foreground/50">
