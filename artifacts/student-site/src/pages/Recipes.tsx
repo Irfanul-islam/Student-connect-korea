@@ -23,7 +23,7 @@ interface Recipe {
   ingredients: string[];
   steps: string[];
   youtubeUrl: string;
-  emoji: string;
+  photoUrl: string;
 }
 
 const TAG_META: Record<Tag, { label: string; color: string; icon: React.ElementType }> = {
@@ -53,7 +53,7 @@ const RECIPES: Recipe[] = [
       "Break the yolk over the noodles and mix — the yolk makes it even creamier.",
     ],
     youtubeUrl: "https://www.youtube.com/results?search_query=gochujang+butter+noodles+tiktok",
-    emoji: "🌶️",
+    photoUrl: "https://images.unsplash.com/photo-1476718406336-bb5a37c462aa?w=600&h=400&fit=crop&auto=format&q=80",
   },
   {
     name: "TikTok Baked Feta Pasta",
@@ -75,7 +75,7 @@ const RECIPES: Recipe[] = [
       "Tear fresh basil over the top, drizzle more olive oil.",
     ],
     youtubeUrl: "https://www.youtube.com/results?search_query=tiktok+baked+feta+pasta+recipe",
-    emoji: "🧀",
+    photoUrl: "https://images.unsplash.com/photo-1473093226795-af9932fe5856?w=600&h=400&fit=crop&auto=format&q=80",
   },
   {
     name: "Smash Burger",
@@ -96,7 +96,7 @@ const RECIPES: Recipe[] = [
       "Stack two patties if making a double. Assemble: sauce on bun, then pickles, then onion, then patties.",
     ],
     youtubeUrl: "https://www.youtube.com/results?search_query=smash+burger+recipe+home",
-    emoji: "🍔",
+    photoUrl: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&h=400&fit=crop&auto=format&q=80",
   },
   {
     name: "Marry Me Chicken",
@@ -117,7 +117,7 @@ const RECIPES: Recipe[] = [
       "Serve over pasta, rice, or with crusty bread to mop up the sauce.",
     ],
     youtubeUrl: "https://www.youtube.com/results?search_query=marry+me+chicken+recipe",
-    emoji: "💍",
+    photoUrl: "https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=600&h=400&fit=crop&auto=format&q=80",
   },
   {
     name: "Egg Drop Ramen",
@@ -137,7 +137,7 @@ const RECIPES: Recipe[] = [
       "Pour the silky egg broth over the noodles. Finish with sesame oil and spring onion.",
     ],
     youtubeUrl: "https://www.youtube.com/results?search_query=egg+drop+ramen+tiktok+silky",
-    emoji: "🍜",
+    photoUrl: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&h=400&fit=crop&auto=format&q=80",
   },
   {
     name: "3-Ingredient Nutella Mug Cake",
@@ -157,7 +157,7 @@ const RECIPES: Recipe[] = [
       "Let cool 1-2 minutes before eating — it firms up as it cools. Eat straight from the mug.",
     ],
     youtubeUrl: "https://www.youtube.com/results?search_query=3+ingredient+nutella+mug+cake+microwave",
-    emoji: "🍫",
+    photoUrl: "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&h=400&fit=crop&auto=format&q=80",
   },
   {
     name: "Dubai Chocolate Bar",
@@ -178,7 +178,7 @@ const RECIPES: Recipe[] = [
       "Refrigerate 1 hour minimum until fully set. Unmold and break or slice into pieces.",
     ],
     youtubeUrl: "https://www.youtube.com/results?search_query=dubai+chocolate+bar+recipe+pistachio",
-    emoji: "🍫",
+    photoUrl: "https://images.unsplash.com/photo-1548940392-7a2d29c75f93?w=600&h=400&fit=crop&auto=format&q=80",
   },
   {
     name: "Viral Crispy Garlic Butter Noodles",
@@ -198,7 +198,7 @@ const RECIPES: Recipe[] = [
       "Plate up immediately with a fried egg on top and spring onion.",
     ],
     youtubeUrl: "https://www.youtube.com/results?search_query=crispy+garlic+butter+noodles+viral",
-    emoji: "🧈",
+    photoUrl: "https://images.unsplash.com/photo-1476718406336-bb5a37c462aa?w=600&h=400&fit=crop&auto=format&q=80",
   },
   {
     name: "Spicy Gochujang Fried Rice",
@@ -218,7 +218,7 @@ const RECIPES: Recipe[] = [
       "Add soy sauce and sesame oil, toss again. Top with a fried egg and spring onion.",
     ],
     youtubeUrl: "https://www.youtube.com/results?search_query=gochujang+fried+rice+recipe",
-    emoji: "🍳",
+    photoUrl: "https://images.unsplash.com/photo-1603133872878-684f208fb054?w=600&h=400&fit=crop&auto=format&q=80",
   },
   {
     name: "Viral Cucumber Salad",
@@ -238,7 +238,7 @@ const RECIPES: Recipe[] = [
       "Can eat immediately or let sit 15-20 min for even more flavour. Keeps in fridge for 2 days.",
     ],
     youtubeUrl: "https://www.youtube.com/results?search_query=viral+korean+cucumber+salad+recipe",
-    emoji: "🥒",
+    photoUrl: "https://images.unsplash.com/photo-1547592180-85f173990554?w=600&h=400&fit=crop&auto=format&q=80",
   },
   {
     name: "Birria-Style Beef Tacos",
@@ -260,7 +260,7 @@ const RECIPES: Recipe[] = [
       "Serve with a small bowl of hot consommé for dipping. Top with raw onion, cilantro, and lime.",
     ],
     youtubeUrl: "https://www.youtube.com/results?search_query=birria+tacos+recipe+home",
-    emoji: "🌮",
+    photoUrl: "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=600&h=400&fit=crop&auto=format&q=80",
   },
 
   // ── BANGLADESHI ──────────────────────────────────────────────────────────
@@ -283,7 +283,7 @@ const RECIPES: Recipe[] = [
       "The khichuri is ready when it's thick and porridge-like. Serve topped with a fried egg and a drizzle of mustard oil.",
     ],
     youtubeUrl: "https://www.youtube.com/results?search_query=bangladeshi+khichuri+recipe",
-    emoji: "🍚",
+    photoUrl: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=400&fit=crop&auto=format&q=80",
   },
   {
     name: "Egg Bhaji (Dimer Bhaji)",
@@ -304,7 +304,7 @@ const RECIPES: Recipe[] = [
       "Serve immediately with steamed rice.",
     ],
     youtubeUrl: "https://www.youtube.com/results?search_query=bangladeshi+egg+bhaji+dimer+bhaji",
-    emoji: "🥚",
+    photoUrl: "https://images.unsplash.com/photo-1525351484163-7529414344d8?w=600&h=400&fit=crop&auto=format&q=80",
   },
   {
     name: "Dal Bhat",
@@ -325,7 +325,7 @@ const RECIPES: Recipe[] = [
       "Serve over steamed rice. Add more mustard oil on top if desired.",
     ],
     youtubeUrl: "https://www.youtube.com/results?search_query=bangladeshi+dal+bhat+recipe",
-    emoji: "🍛",
+    photoUrl: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=400&fit=crop&auto=format&q=80",
   },
   {
     name: "Bangladeshi Chicken Curry",
@@ -346,7 +346,7 @@ const RECIPES: Recipe[] = [
       "Finish with garam masala, stir. Garnish with fresh coriander. Serve with rice.",
     ],
     youtubeUrl: "https://www.youtube.com/results?search_query=bangladeshi+chicken+curry+recipe",
-    emoji: "🍗",
+    photoUrl: "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?w=600&h=400&fit=crop&auto=format&q=80",
   },
   {
     name: "Aloo Bhorta",
@@ -367,7 +367,7 @@ const RECIPES: Recipe[] = [
       "Serve with steamed rice and dal.",
     ],
     youtubeUrl: "https://www.youtube.com/results?search_query=aloo+bhorta+bangladeshi+mashed+potato",
-    emoji: "🥔",
+    photoUrl: "https://images.unsplash.com/photo-1518977264203-91f69d63a8fd?w=600&h=400&fit=crop&auto=format&q=80",
   },
 
   // ── KOREAN ───────────────────────────────────────────────────────────────
@@ -389,7 +389,7 @@ const RECIPES: Recipe[] = [
       "Fold egg through the rice. Plate up. Top with spring onion and sesame seeds.",
     ],
     youtubeUrl: "https://www.youtube.com/results?search_query=kimchi+fried+rice+recipe+easy",
-    emoji: "🍳",
+    photoUrl: "https://images.unsplash.com/photo-1603133872878-684f208fb054?w=600&h=400&fit=crop&auto=format&q=80",
   },
   {
     name: "Ramyeon Upgrade",
@@ -409,7 +409,7 @@ const RECIPES: Recipe[] = [
       "Pour into a bowl (or eat from the pot), top with spring onion. Don't waste the broth.",
     ],
     youtubeUrl: "https://www.youtube.com/results?search_query=ramyeon+upgrade+recipe+korean",
-    emoji: "🍜",
+    photoUrl: "https://images.unsplash.com/photo-1557499305-f35a62e4e2b4?w=600&h=400&fit=crop&auto=format&q=80",
   },
   {
     name: "Doenjang Jjigae",
@@ -429,7 +429,7 @@ const RECIPES: Recipe[] = [
       "Optional: add a raw egg in the last 2 minutes, cover and let it half-set.",
     ],
     youtubeUrl: "https://www.youtube.com/results?search_query=doenjang+jjigae+recipe",
-    emoji: "🍲",
+    photoUrl: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=400&fit=crop&auto=format&q=80",
   },
   {
     name: "Bibimbap",
@@ -450,7 +450,7 @@ const RECIPES: Recipe[] = [
       "Drizzle 1 tsp sesame oil all over. When ready to eat, mix EVERYTHING together vigorously — this is essential.",
     ],
     youtubeUrl: "https://www.youtube.com/results?search_query=bibimbap+recipe+home+easy",
-    emoji: "🥗",
+    photoUrl: "https://images.unsplash.com/photo-1590301157890-4d7b8c37dc10?w=600&h=400&fit=crop&auto=format&q=80",
   },
 
   // ── ITALIAN ──────────────────────────────────────────────────────────────
@@ -473,7 +473,7 @@ const RECIPES: Recipe[] = [
       "Finish with fresh parsley and lots of black pepper.",
     ],
     youtubeUrl: "https://www.youtube.com/results?search_query=pasta+aglio+e+olio+recipe",
-    emoji: "🍝",
+    photoUrl: "https://images.unsplash.com/photo-1473093226795-af9932fe5856?w=600&h=400&fit=crop&auto=format&q=80",
   },
   {
     name: "Tomato Basil Pasta",
@@ -493,7 +493,7 @@ const RECIPES: Recipe[] = [
       "Taste and adjust salt. Serve immediately.",
     ],
     youtubeUrl: "https://www.youtube.com/results?search_query=simple+tomato+basil+pasta+recipe",
-    emoji: "🍅",
+    photoUrl: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&h=400&fit=crop&auto=format&q=80",
   },
   {
     name: "Spaghetti Carbonara",
@@ -513,7 +513,7 @@ const RECIPES: Recipe[] = [
       "Keep adding pasta water and tossing until you reach a silky consistency. Serve immediately with extra parmesan and black pepper.",
     ],
     youtubeUrl: "https://www.youtube.com/results?search_query=authentic+carbonara+recipe+no+cream",
-    emoji: "🧀",
+    photoUrl: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=400&fit=crop&auto=format&q=80",
   },
 
   // ── INDIAN ────────────────────────────────────────────────────────────────
@@ -536,7 +536,7 @@ const RECIPES: Recipe[] = [
       "Stir, add lemon juice, taste and adjust salt. Serve with rice or chapati.",
     ],
     youtubeUrl: "https://www.youtube.com/results?search_query=dal+tadka+recipe+easy",
-    emoji: "🫘",
+    photoUrl: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&h=400&fit=crop&auto=format&q=80",
   },
   {
     name: "Chana Masala",
@@ -557,7 +557,7 @@ const RECIPES: Recipe[] = [
       "Finish with garam masala and a squeeze of lemon. Serve with rice or flatbread.",
     ],
     youtubeUrl: "https://www.youtube.com/results?search_query=chana+masala+recipe+canned+chickpeas",
-    emoji: "🫘",
+    photoUrl: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&h=400&fit=crop&auto=format&q=80",
   },
   {
     name: "Egg Curry",
@@ -578,7 +578,7 @@ const RECIPES: Recipe[] = [
       "Add fried eggs, coat in sauce, simmer 4-5 minutes. Finish with garam masala.",
     ],
     youtubeUrl: "https://www.youtube.com/results?search_query=egg+curry+recipe+easy",
-    emoji: "🥚",
+    photoUrl: "https://images.unsplash.com/photo-1607532941433-304659e8198a?w=600&h=400&fit=crop&auto=format&q=80",
   },
 
   // ── JAPANESE ─────────────────────────────────────────────────────────────
@@ -599,7 +599,7 @@ const RECIPES: Recipe[] = [
       "Top with sliced spring onion. Eat immediately before the rice cools.",
     ],
     youtubeUrl: "https://www.youtube.com/results?search_query=tamago+kake+gohan+TKG+recipe",
-    emoji: "🍳",
+    photoUrl: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&h=400&fit=crop&auto=format&q=80",
   },
   {
     name: "Oyakodon (Chicken & Egg Bowl)",
@@ -620,7 +620,7 @@ const RECIPES: Recipe[] = [
       "Slide the entire portion over a bowl of hot rice without breaking the egg.",
     ],
     youtubeUrl: "https://www.youtube.com/results?search_query=oyakodon+recipe+Japanese+chicken+egg+bowl",
-    emoji: "🍚",
+    photoUrl: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=400&fit=crop&auto=format&q=80",
   },
 
   // ── MIDDLE EASTERN ────────────────────────────────────────────────────────
@@ -643,7 +643,7 @@ const RECIPES: Recipe[] = [
       "Check: whites should be set but yolks still runny. Serve straight from the pan with flatbread.",
     ],
     youtubeUrl: "https://www.youtube.com/results?search_query=shakshuka+recipe+easy",
-    emoji: "🫑",
+    photoUrl: "https://images.unsplash.com/photo-1616501268025-7afa75ec4e9c?w=600&h=400&fit=crop&auto=format&q=80",
   },
   {
     name: "Red Lentil Soup",
@@ -663,7 +663,7 @@ const RECIPES: Recipe[] = [
       "Serve with a drizzle of olive oil and a pinch of paprika or cumin on top. Bread for dipping.",
     ],
     youtubeUrl: "https://www.youtube.com/results?search_query=middle+eastern+red+lentil+soup+recipe",
-    emoji: "🥣",
+    photoUrl: "https://images.unsplash.com/photo-1547592180-85f173990554?w=600&h=400&fit=crop&auto=format&q=80",
   },
 
   // ── WESTERN ───────────────────────────────────────────────────────────────
@@ -685,7 +685,7 @@ const RECIPES: Recipe[] = [
       "The omelette should be pale yellow, barely browned, and slightly glossy. That's how you know it's perfect.",
     ],
     youtubeUrl: "https://www.youtube.com/results?search_query=perfect+omelette+gordon+ramsay+french",
-    emoji: "🍳",
+    photoUrl: "https://images.unsplash.com/photo-1525351484163-7529414344d8?w=600&h=400&fit=crop&auto=format&q=80",
   },
   {
     name: "Easy Chicken Stir-Fry",
@@ -706,7 +706,7 @@ const RECIPES: Recipe[] = [
       "Serve immediately over rice.",
     ],
     youtubeUrl: "https://www.youtube.com/results?search_query=easy+chicken+stir+fry+recipe+home",
-    emoji: "🥦",
+    photoUrl: "https://images.unsplash.com/photo-1544025162-d76538b1a6c7?w=600&h=400&fit=crop&auto=format&q=80",
   },
 
   // ── CHINESE ───────────────────────────────────────────────────────────────
@@ -729,7 +729,7 @@ const RECIPES: Recipe[] = [
       "Add soy sauce and sesame oil, toss. Garnish with spring onion.",
     ],
     youtubeUrl: "https://www.youtube.com/results?search_query=egg+fried+rice+wok+recipe",
-    emoji: "🍳",
+    photoUrl: "https://images.unsplash.com/photo-1603133872878-684f208fb054?w=600&h=400&fit=crop&auto=format&q=80",
   },
   {
     name: "Congee (Rice Porridge)",
@@ -749,7 +749,7 @@ const RECIPES: Recipe[] = [
       "Serve with any toppings. Fried egg is the most satisfying. A drizzle of soy sauce and sesame oil is the minimum.",
     ],
     youtubeUrl: "https://www.youtube.com/results?search_query=congee+rice+porridge+recipe",
-    emoji: "🥣",
+    photoUrl: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&h=400&fit=crop&auto=format&q=80",
   },
 
   // ── THAI ─────────────────────────────────────────────────────────────────
@@ -773,7 +773,7 @@ const RECIPES: Recipe[] = [
       "Serve immediately over rice with the crispy egg on top.",
     ],
     youtubeUrl: "https://www.youtube.com/results?search_query=pad+kra+pao+thai+basil+stir+fry+recipe",
-    emoji: "🌿",
+    photoUrl: "https://images.unsplash.com/photo-1562802378-063ec186a863?w=600&h=400&fit=crop&auto=format&q=80",
   },
 
   // ── MEXICAN ───────────────────────────────────────────────────────────────
@@ -796,7 +796,7 @@ const RECIPES: Recipe[] = [
       "Slide out, cut into triangles with a knife or scissors. Serve with sour cream, salsa, or sliced avocado.",
     ],
     youtubeUrl: "https://www.youtube.com/results?search_query=black+bean+quesadilla+recipe+easy",
-    emoji: "🌮",
+    photoUrl: "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=600&h=400&fit=crop&auto=format&q=80",
   },
 ];
 
@@ -814,6 +814,7 @@ function TagBadge({ tag }: { tag: Tag }) {
 function RecipeCard({ recipe }: { recipe: Recipe }) {
   const [showIngredients, setShowIngredients] = useState(false);
   const [showSteps, setShowSteps] = useState(false);
+  const [imgError, setImgError] = useState(false);
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-60px" });
 
@@ -828,25 +829,63 @@ function RecipeCard({ recipe }: { recipe: Recipe }) {
         recipe.tags.includes("viral") ? "border-purple-200" : "border-border"
       }`}
     >
-      {recipe.tags.includes("viral") && (
-        <div className="bg-gradient-to-r from-purple-500 to-pink-500 px-4 py-1 flex items-center gap-1.5">
-          <Sparkles className="w-3 h-3 text-white" />
-          <span className="text-xs font-bold text-white tracking-wide uppercase">Viral / Cheat Meal</span>
-        </div>
-      )}
+      {/* Food photo */}
+      <div className="relative h-44 overflow-hidden bg-muted shrink-0">
+        {!imgError ? (
+          <img
+            src={recipe.photoUrl}
+            alt={recipe.name}
+            className="w-full h-full object-cover"
+            loading="lazy"
+            onError={() => setImgError(true)}
+          />
+        ) : (
+          <div className={`w-full h-full flex flex-col items-center justify-center gap-2 ${
+            recipe.tags.includes("viral")
+              ? "bg-gradient-to-br from-purple-400 to-pink-500"
+              : recipe.cuisine === "Korean" ? "bg-gradient-to-br from-red-400 to-orange-400"
+              : recipe.cuisine === "Bangladeshi" ? "bg-gradient-to-br from-green-600 to-emerald-500"
+              : recipe.cuisine === "Italian" ? "bg-gradient-to-br from-amber-400 to-orange-500"
+              : recipe.cuisine === "Indian" ? "bg-gradient-to-br from-orange-500 to-yellow-400"
+              : recipe.cuisine === "Japanese" ? "bg-gradient-to-br from-rose-400 to-pink-400"
+              : recipe.cuisine === "Middle Eastern" ? "bg-gradient-to-br from-amber-600 to-yellow-500"
+              : recipe.cuisine === "Chinese" ? "bg-gradient-to-br from-red-500 to-orange-400"
+              : recipe.cuisine === "Thai" ? "bg-gradient-to-br from-teal-500 to-green-500"
+              : recipe.cuisine === "Mexican" ? "bg-gradient-to-br from-red-500 to-amber-500"
+              : "bg-gradient-to-br from-primary to-primary/70"
+          }`}>
+            <span className="text-4xl">
+              {recipe.cuisine === "Korean" ? "🇰🇷"
+               : recipe.cuisine === "Bangladeshi" ? "🇧🇩"
+               : recipe.cuisine === "Italian" ? "🇮🇹"
+               : recipe.cuisine === "Indian" ? "🇮🇳"
+               : recipe.cuisine === "Japanese" ? "🇯🇵"
+               : recipe.cuisine === "Middle Eastern" ? "☪️"
+               : recipe.cuisine === "Chinese" ? "🇨🇳"
+               : recipe.cuisine === "Thai" ? "🇹🇭"
+               : recipe.cuisine === "Mexican" ? "🇲🇽"
+               : "🍽️"}
+            </span>
+            <span className="text-white/90 text-xs font-semibold text-center px-4 leading-tight">{recipe.name}</span>
+          </div>
+        )}
+        {recipe.tags.includes("viral") && (
+          <div className="absolute top-0 left-0 right-0 bg-gradient-to-r from-purple-500 to-pink-500 px-4 py-1 flex items-center gap-1.5">
+            <Sparkles className="w-3 h-3 text-white" />
+            <span className="text-xs font-bold text-white tracking-wide uppercase">Viral / Cheat Meal</span>
+          </div>
+        )}
+      </div>
 
       <div className="p-5 flex flex-col gap-3 flex-1">
         {/* Header */}
-        <div className="flex items-start gap-3">
-          <span className="text-3xl mt-0.5">{recipe.emoji}</span>
-          <div className="flex-1 min-w-0">
-            <div className="flex items-start justify-between gap-2">
-              <h3 className="font-semibold text-foreground text-base leading-snug">{recipe.name}</h3>
-              <span className="text-xs bg-muted text-muted-foreground rounded-full px-2.5 py-0.5 shrink-0">{recipe.cuisine}</span>
-            </div>
-            <div className="flex flex-wrap gap-1.5 mt-1.5">
-              {recipe.tags.map((t) => <TagBadge key={t} tag={t} />)}
-            </div>
+        <div>
+          <div className="flex items-start justify-between gap-2">
+            <h3 className="font-semibold text-foreground text-base leading-snug">{recipe.name}</h3>
+            <span className="text-xs bg-muted text-muted-foreground rounded-full px-2.5 py-0.5 shrink-0">{recipe.cuisine}</span>
+          </div>
+          <div className="flex flex-wrap gap-1.5 mt-1.5">
+            {recipe.tags.map((t) => <TagBadge key={t} tag={t} />)}
           </div>
         </div>
 
