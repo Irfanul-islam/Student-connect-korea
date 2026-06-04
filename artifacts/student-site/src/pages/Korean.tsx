@@ -5,7 +5,7 @@ import { ChevronLeft, Volume2, Search, Copy, Check } from "lucide-react";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.45, ease: "easeOut" } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.45, ease: "easeOut" as const } },
 };
 const stagger = { visible: { transition: { staggerChildren: 0.06 } } };
 

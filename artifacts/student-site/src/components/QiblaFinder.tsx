@@ -7,7 +7,7 @@ const MECCA_LNG = 39.8579;
 
 // How aggressively we smooth (per RAF frame at ~60fps)
 // 0.12 = ~8 frames to reach target = visually smooth but responsive
-const EMA_ALPHA = 0.12;
+const EMA_ALPHA = 0.22;
 
 // Ignore sensor deltas smaller than this (kills stationary jitter)
 const DEADZONE_DEG = 0.4;
