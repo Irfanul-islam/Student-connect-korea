@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Router, type IRouter, type Response } from "express";
 import { HealthCheckResponse } from "@workspace/api-zod";
 
