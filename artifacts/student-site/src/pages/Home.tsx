@@ -320,7 +320,7 @@ const phrases = [
 ];
 
 const tips = [
-  { icon: BookOpen, title: "KMF Halal Certification", body: "Korea Muslim Federation (kmf.or.kr) publishes the official certified halal restaurant and product list. Always the safest reference.", url: "https://www.kmf.or.kr" },
+  { icon: BookOpen, title: "KMF Halal Certification", body: "Korea Muslim Federation (https://haikorea.org/en) publishes the official certified halal restaurant and product list. Always the safest reference.", url: "https://haikorea.org/en" },
   { icon: Globe, title: "Foreigner Help Line — 1345", body: "24/7 government hotline in English and Bengali. Immigration, legal aid, emergencies. Save this number now.", url: "" },
   { icon: Navigation, title: "Naver Maps (네이버 지도)", body: "More accurate than Google Maps in Korea. Search '할랄 음식점 아산' or '할랄 음식점 천안' for nearby halal eateries.", url: "https://map.naver.com" },
   { icon: Phone, title: "Emergency Numbers", body: "Police: 112 · Fire & Ambulance: 119 · Foreigner Help: 1345 (Bengali available)", url: "" },
@@ -692,7 +692,7 @@ export default function Home() {
               <p className="font-semibold text-lg">Korea Muslim Federation (KMF)</p>
               <p className="text-primary-foreground/80 text-sm mt-1">Halal certification, event listings, and Muslim community support across Korea.</p>
             </div>
-            <a href="https://www.kmf.or.kr" target="_blank" rel="noopener noreferrer"
+            <a href="https://www.koreaislam.org/" target="_blank" rel="noopener noreferrer"
               className="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-primary font-semibold text-sm hover:bg-white/90 transition shadow-sm">
               Visit KMF<ChevronRight className="w-4 h-4" />
             </a>
